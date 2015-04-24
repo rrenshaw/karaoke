@@ -1,0 +1,11 @@
+<h1>Welcom to RickRoll Karaoke</h1>
+
+<%= link_to 'Track List (sorted by artist)', controller: 'tracks' %>
+
+<%= form_tag tracks_path, :method => 'get'  do %>
+  <p>
+    <%= text_field_tag :search %>
+    <%= submit_tag 'Search' %>
+  </p>
+<% end %>
+

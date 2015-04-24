@@ -1,0 +1,15 @@
+<%= form_for :track, url: tracks_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :artist %><br>
+    <%= f.text_field :artist %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,18 @@
+
+<%= form_tag tracks_path, :method => 'get'  do %>
+  <p>
+    <%= text_field_tag :search %>
+    <%= submit_tag 'Search' %>
+  </p>
+<% end %>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @track.artist %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @track.title %>
+</p>
+
+

@@ -1,0 +1,27 @@
+<h1>Listing tracks</h1>
+
+<%= form_tag tracks_path, :method => 'get'  do %>
+  <p>
+    <%= text_field_tag :search %>
+    <%= submit_tag 'Search' %>
+  </p>
+<% end %>
+
+<table>
+  <tr>
+    <th>Artist</th>
+    <th>Title</th>
+  </tr>
+
+  <% if @tracks.nil? %>
+    <tr><td colspan="2">Nothing found</td></tr>
+  <% else %>
+    <% @tracks.each do |track| %>
+      <tr>
+        <td><%= track.artist %></td>
+        <td><%= track.title %></td>
+        <td><%= link_to 'Play', track_path(track) %>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
