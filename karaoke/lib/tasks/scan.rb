@@ -58,12 +58,15 @@ class Scan
  					title  = File.title(path)
 					if artist.nil?
 						puts("File #{path} does not have an artist tag")
-						artist = path.split(/ - /)[1]
+						artist = path.split(/ - /)[0]
 					end
 					if title.nil?
 						puts("File #{path} does not have a title tag")
-						title = path.split(/ - /)[2]
-						title.gsub!(/.mp3/)
+						title = path.split(/ - /)[1]
+            if title.nil?
+              raise "Problem with title, #{path.split(/ - /)}"
+            end
+						title.gsub(/.mp3/) 
 					end
 				
 					cdg = path.gsub(/.mp3$/,'.cdg')

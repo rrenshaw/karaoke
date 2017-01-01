@@ -32,7 +32,9 @@ development:
   #username: karaoke
   username: karaoke
   password: kariokie
-  host: 192.168.0.8
+  #host: 192.168.0.8
+  #host: 192.168.0.9
+  host: localhost
 
   # The password associated with the postgres role (username).
   #password:
@@ -63,7 +65,7 @@ test:
   database: karaoke_test
   username: karaoke
   password: kariokie
-  host: 192.168.0.8
+  host: localhost
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -91,4 +93,4 @@ production:
   #password: <%= ENV['KARAOKE_DATABASE_PASSWORD'] %>
   username: karaoke
   password: kariokie
-  host: 192.168.0.8
+  host: localhost
