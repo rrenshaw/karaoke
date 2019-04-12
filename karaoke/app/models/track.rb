@@ -11,7 +11,7 @@ class Track < ActiveRecord::Base
     if query
       #find(:all, :conditions => ['title LIKE ?', "%#{query}%"])
       #where ('title like ? or artist like ?', "%#{query}%", "%#{query}%")
-      where('lower(title) like lower(?) or lower(artist) like lower(?)', "%#{query}%", "%#{query}%").order('artist')
+      where('lower(title) like lower(?) or lower(artist) like lower(?)', "%#{query}%", "%#{query}%").order('artist, title')
     else
       #find(:all)
       all.order('artist')
