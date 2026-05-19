@@ -90,7 +90,7 @@ GEM
     connection_pool (3.0.2)
     crass (1.0.6)
     daemons (1.4.0)
-    date (3.4.1)
+    date (3.5.1)
     drb (2.2.3)
     erb (5.1.1)
     erubi (1.13.1)
@@ -129,7 +129,7 @@ GEM
     mini_portile2 (2.8.9)
     minitest (5.27.0)
     multi_json (1.13.1)
-    net-imap (0.5.9)
+    net-imap (0.5.14)
       date
       net-protocol
     net-pop (0.1.2)
