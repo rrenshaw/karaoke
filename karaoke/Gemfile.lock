@@ -129,7 +129,7 @@ GEM
     mini_portile2 (2.8.9)
     minitest (5.27.0)
     multi_json (1.13.1)
-    net-imap (0.5.14)
+    net-imap (0.5.15)
       date
       net-protocol
     net-pop (0.1.2)
